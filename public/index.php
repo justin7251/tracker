@@ -3,6 +3,9 @@ use Phalcon\Di\FactoryDefault;
 
 error_reporting(E_ALL);
 
+//debug
+(new Phalcon\Debug)->listen();
+
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
 
