@@ -22,7 +22,7 @@ class Users extends Model
      * @var string
      * @Column(type="string", length=70, nullable=false)
      */
-    public $name;
+    public $username;
 
     /**
      *
@@ -49,7 +49,7 @@ class Users extends Model
         );
 
         $validator->add(
-            'name',
+            'username',
             new UniquenessValidator([
                 'model' => $this,
                 'message' => 'Sorry, That username is already taken',

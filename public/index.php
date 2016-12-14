@@ -1,5 +1,7 @@
 <?php
 use Phalcon\Di\FactoryDefault;
+use Phalcon\Loader;
+
 
 error_reporting(E_ALL);
 
@@ -8,6 +10,7 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
+
 
 try {
 
@@ -27,10 +30,17 @@ try {
      */
     $config = $di->getConfig();
 
+    $loader = new Loader();
     /**
-     * Include Autoloader
+     * We're a registering a set of directories taken from the configuration file
      */
-    include APP_PATH . '/config/loader.php';
+    $loader->registerDirs(
+        [
+            $config->application->controllersDir,
+            $config->application->modelsDir
+        ]
+    )->register();
+
 
     /**
      * Handle the request
