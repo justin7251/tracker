@@ -24,7 +24,7 @@
                     <a href="#contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/tracker/signup"><button type="button" class="btn btn-primary btn-sm sign-button">Sign in</button></a>
+                    <a href="/tracker/user/sign_in"><button type="button" class="btn btn-primary btn-sm sign-button">Sign in</button></a>
                 </li>
             </ul>
         </div>
@@ -33,11 +33,13 @@
     <!-- /.container -->
 </nav>
 
-<div class="container main-content">
+<div class="main-content">
     {{ flash.output() }}
     {{ content() }}
     <hr>
-    <footer>
-        <p>&copy; Company 2015</p>
-    </footer>
+    <div class="container">
+        <footer>
+            <p>&copy; Company 2017</p>
+        </footer>
+    </div>
 </div>

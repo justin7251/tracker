@@ -37,7 +37,8 @@ try {
     $loader->registerDirs(
         [
             $config->application->controllersDir,
-            $config->application->modelsDir
+            $config->application->modelsDir,
+            $config->application->formsDir
         ]
     )->register();
 

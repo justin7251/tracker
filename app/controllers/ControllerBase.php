@@ -8,6 +8,7 @@ class ControllerBase extends Controller
     {
         $this->tag->prependTitle('Tracker | ');
         $this->view->setTemplateAfter('main');
+        $this->assets->addCss("css/main.css");
     }
 
     public function prr($data, $name)

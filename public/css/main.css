@@ -1,6 +1,41 @@
+
+
+
+
+
+
+
+
+/******************* bootstrap ovrride ***************/
+.alert {
+	padding:0px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 800px !important;
+}
+
+
+
+
+
+
+
+
+
+/************************ ******************/
+
+
 .main-content {
     padding: 55px 0;
 }
 .sign-button {
 	margin-top: -6px;
+}
+
+.hideme {
+	display: none;
 }
